@@ -3,13 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Cookie Cookie</title>
+    <script type="text/javascript" src="jquery-2.1.3.js"></script>
     <script type="text/javascript" src="cookies.js"></script>
-    <script type="text/javascript" src="./public/scripts/index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
     <h1>Choose your favorite cookie!</h1>
     <form>
+      <!-- Sugar Cookie -->
+      <input type="radio" name="" value="Sugar Cookie">Sugar Cookie
+      <input type="number" name="sugar-quantity" id="sugar-quantity">
+      <!-- Chocolate Cookie -->
+      <input type="radio" name="" value="Chocolate Cookie">Chocolate Cookie
+      <input type="number" name="chocolate-quantity" id="chocolate-quantity">
+      <!-- Lemon Cookie -->
+      <input type="radio" name="" value="Lemon Cookie">Lemon Cookie
+      <input type="number" name="lemon-quantity" id="lemon-quantity">
 
+      <!-- Submit Button -->
+      <button id="btn">Submit!</button>
     </form>
   </body>
 </html>
