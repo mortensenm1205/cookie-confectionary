@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 9000;
 
 app.use(cookieParser());
-app.use(express.static(__dirname, '/public/scripts'));
+app.use(express.static(__dirname + '/public/scripts'));
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
