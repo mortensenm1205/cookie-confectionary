@@ -1,11 +1,17 @@
 $(function() {
 
-var sugarCookie = $("#sugar-quantity").val();
-var chocolateCookie = $("#chocolate-quantity").val();
-var lemonCookie = $("#lemon-quantity").val();
-var btn = $("#btn");
+  var cookieQuantitys = $("input");
+  var btn = $("#btn");
 
-function setCookies() {}
+  function setCookies() {
+    $.each(cookieQuantitys, (index, cookie) => {
+      Cookies.set(cookie.name, cookie.value);
+    });
+  };
 
+  btn.on("click",  (e) => {
+    e.preventDefault();
+    setCookies();
+  });
 
 });

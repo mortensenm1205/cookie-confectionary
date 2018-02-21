@@ -8,7 +8,13 @@ app.use(cookieParser());
 app.use(express.static(__dirname + '/public/scripts'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html');
+  let cookies = req.cookies;
+
+  if(Object.keys(cookies).length !== 0) {
+    res.send('Hey fatass clear your cookies');
+  } else {
+    res.sendFile(__dirname + '/views/index.html');
+  }
 });
 
 app.listen(port, () => console.log(`running on ${port} <3`));
