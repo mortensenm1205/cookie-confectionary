@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   let cookies = req.cookies;
 
   if(Object.keys(cookies).length !== 0) {
-    res.send('Hey fatass clear your cookies');
+    res.sendFile(__dirname + '/views/clear.html');
   } else {
     res.sendFile(__dirname + '/views/index.html');
   }
