@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 9000;
 
 app.use(cookieParser());
-app.use(express.static(__dirname + '/public/scripts'));
+app.use(express.static(__dirname + '/public/'));
 
 app.get('/', (req, res) => {
   let cookies = req.cookies;
