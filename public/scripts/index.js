@@ -19,7 +19,7 @@ $(function() {
     } else {
       setCookies();
       cookieQuantitys.each((i) => {
-        results.append(` You choose ${Cookies.get(`${cookieQuantitys[i].name}`)} amount of cookies for ${cookieQuantitys[i].name}!  <br/>`);
+        results.append(` You choose an amount of ${Cookies.get(`${cookieQuantitys[i].name}`)} cookies for ${cookieQuantitys[i].name}!  <br/>`);
       });
       results.append('Come back for more anytime!');
     }
